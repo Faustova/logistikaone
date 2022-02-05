@@ -2303,6 +2303,15 @@ var plugins = [{
   options: {
     "plugins": []
   }
+}, {
+  name: 'gatsby-plugin-posthog',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-posthog/gatsby-ssr */ "./node_modules/gatsby-plugin-posthog/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "apiKey": "phc_nFJ8UUD4luvrPZ7Ef8WIkC4UyrbbfSUmhytE8sVqNjf",
+    "head": true,
+    "isEnabledDevMode": true
+  }
 }];
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:
@@ -2663,6 +2672,63 @@ HTML.propTypes = {
 
 /***/ }),
 
+/***/ "./node_modules/gatsby-plugin-posthog/gatsby-ssr.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-posthog/gatsby-ssr.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/gatsby/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.onRenderBody = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/gatsby/node_modules/@babel/runtime/helpers/extends.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var defaultOptions = {
+  isEnabledDevMode: false,
+  apiHost: 'https://app.posthog.com',
+  head: true
+};
+
+var onRenderBody = function onRenderBody(_ref, pluginOptions) {
+  var setHeadComponents = _ref.setHeadComponents,
+      setPostBodyComponents = _ref.setPostBodyComponents;
+  var options = Object.assign({}, defaultOptions, pluginOptions);
+  var isEnabled =  false || options.isEnabledDevMode;
+
+  if (!isEnabled) {
+    console.log("Posthog Analytics not enabled");
+    return null;
+  }
+
+  var posthogScript = /*#__PURE__*/_react.default.createElement("script", {
+    key: "gatsby-plugin-posthog",
+    dangerouslySetInnerHTML: {
+      __html: "\n !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(\".\");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement(\"script\")).type=\"text/javascript\",p.async=!0,p.src=s.api_host+\"/static/array.js\",(r=t.getElementsByTagName(\"script\")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a=\"posthog\",u.people=u.people||[],u.toString=function(t){var e=\"posthog\";return\"posthog\"!==a&&(e+=\".\"+a),t||(e+=\" (stub)\"),e},u.people.toString=function(){return u.toString(1)+\".people (stub)\"},o=\"capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset\".split(\" \"),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);\nposthog.init('" + options.apiKey + "', " + JSON.stringify((0, _extends2.default)({
+        api_host: options.apiHost
+      }, options.initOptions)) + ")\n          "
+    }
+  });
+
+  if (options.head) {
+    setHeadComponents([posthogScript]);
+  } else {
+    setPostBodyComponents([posthogScript]);
+  }
+
+  return null;
+};
+
+exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-theme-codebushi/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js":
 /*!***************************************************************************************************!*\
   !*** ./node_modules/gatsby-theme-codebushi/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js ***!
@@ -2697,6 +2763,53 @@ var onRenderBody = function onRenderBody(_ref) {
 };
 
 exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby/node_modules/@babel/runtime/helpers/extends.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/gatsby/node_modules/@babel/runtime/helpers/extends.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/gatsby/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \******************************************************************************************/
+/***/ ((module) => {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 

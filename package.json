@@ -14,6 +14,7 @@
   "dependencies": {
     "gatsby": "^4.0.0",
     "gatsby-plugin-emotion": "^7.0.0",
+    "gatsby-plugin-posthog": "^1.0.1",
     "gatsby-theme-codebushi": "^1.0.0",
     "postcss": "^8.3.8",
     "react": "^17.0.1",

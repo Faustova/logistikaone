@@ -2,6 +2,10 @@ var plugins = [{
       name: 'gatsby-plugin-react-helmet',
       plugin: require('/Users/lidiafaustova/logistikaone/node_modules/gatsby-theme-codebushi/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      name: 'gatsby-plugin-posthog',
+      plugin: require('/Users/lidiafaustova/logistikaone/node_modules/gatsby-plugin-posthog/gatsby-ssr'),
+      options: {"plugins":[],"apiKey":"phc_nFJ8UUD4luvrPZ7Ef8WIkC4UyrbbfSUmhytE8sVqNjf","head":true,"isEnabledDevMode":true},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:

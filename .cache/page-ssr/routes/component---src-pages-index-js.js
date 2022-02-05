@@ -300,7 +300,7 @@ const Header = () => (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("header"
   className: "flex items-center text-2xl"
 }, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
   className: "w-12 mr-3"
-}, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)(_svg_LogoIcon__WEBPACK_IMPORTED_MODULE_2__["default"], null)), "Lander"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+}, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)(_svg_LogoIcon__WEBPACK_IMPORTED_MODULE_2__["default"], null)), "Logistika One"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
   className: "flex mt-4 sm:mt-0"
 }, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
   className: "px-4",
@@ -318,7 +318,7 @@ const Header = () => (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("header"
   className: "hidden md:block"
 }, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
   className: "text-sm"
-}, "Start Free Trial"))));
+}, "Contact"))));
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
 
