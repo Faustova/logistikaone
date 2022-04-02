@@ -138,16 +138,16 @@ const Header = () => (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("header"
 }, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
   className: "px-4",
   href: "#features"
-}, "Features"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
+}, "Home"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
   className: "px-4",
   href: "#services"
 }, "Services"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
   className: "px-4",
   href: "#stats"
-}, "Stats"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
+}, "About"), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_anchor_link_smooth_scroll__WEBPACK_IMPORTED_MODULE_1___default()), {
   className: "px-4",
   href: "#testimonials"
-}, "Testimonials")), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+}, "(Testimonials)")), (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
   className: "hidden md:block"
 }, (0,_emotion_core__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
   className: "text-sm"
