@@ -1,0 +1,16 @@
+@tailwind base;
+
+a {
+  @apply text-primary;
+}
+a:hover {
+  @apply text-primary-darker;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.image-Hero{
+  padding-right: 5%;
+}
