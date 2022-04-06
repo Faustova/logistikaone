@@ -707,6 +707,18 @@ button[data-tooltip]{
   font-weight:400;
   padding:0 0 0 0;
 }
+#ir19tp{
+  color:black;
+  width:113px;
+  height:103px;
+}
+#i23n{
+  background-image:url("https://grapesjs.com/img/bg-gr-v.png");
+  background-repeat:repeat-y;
+  background-position:left top;
+  background-attachment:scroll;
+  background-size:contain;
+}
 @media (max-width: 768px){
   .row{
     flex-wrap:wrap;
